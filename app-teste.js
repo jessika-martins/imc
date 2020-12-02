@@ -1,7 +1,5 @@
-const app = require("./app");
+const imc = require("./app");
 
-let resultado = 0;
+let resultado = imc(45, 1.60);
 
-resultado = app.pesoimc(45,1.60);
-console.log(app.pesoimc() == resultado);
-
+console.log("Abaixo do peso" == resultado);

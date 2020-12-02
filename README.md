@@ -1,4 +1,3 @@
-# imc
-Calculadora de IMC
+# Calculadora de IMC
 
-Uma calculadora de IMC utilizando javascript e html.
+Uma calculadora de IMC utilizando JavaScript e HTML.

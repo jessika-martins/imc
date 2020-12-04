@@ -9,14 +9,14 @@ function imc(peso, altura) {
     let imc = peso / Math.pow(altura, 2);
 
     if (imc < 18.5) {
-        return "Abaixo do peso";
+        return "abaixo";
     } else if ((imc > 18.5) && (imc < 24.9)) {
-        return "Normal";
+        return "normal";
     } else if ((imc > 24.9) && (imc < 30)) {
-        return "Sobrepeso";
+        return "sobrepeso";
     } else if (imc > 30) {
-        return "Obesidade";
+        return "obeso";
     }
 }
 
-// module.exports = imc;
+module.exports = imc;

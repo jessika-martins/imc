@@ -1,31 +1,74 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Calculadora de IMC</title>
-    </head>
-    <body>
-        <center>
-            <p>
-        <div> 
-            <label for="txt-number1" class="form-label">Peso: </label>
-            <input type="txt" class="form-control" id="txt-number1" >
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>IMC</h1>
+            </div>
         </div>
-        
-        <div> 
-            <label for="txt-number2" class="form-label">Altura: </label>
-            <input type="txt" class="form-control" id="txt-number2" >
+
+
+        <div class="row">
+            <div class="col">
+                <form>
+
+                    <div class="mb-3">
+                        <label for="txt-number1" class="form-label">Peso </label>
+                        <input type="txt" class="form-control" id="txt-number1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt-number2" class="form-label">Altura </label>
+                        <input type="txt" class="form-control" id="txt-number2">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Resultado</label>
+                        <input class="form-control" type="text" aria-label="readonly input example" readonly  id="display">
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" class='btn btn-primary btn-sm' id="btn-imc-1"> Calcular </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col">
+                <form>
+                    <div class="mb-3">
+                        <label for="txt-peso" class="form-label">Peso</label>
+                        <input type="email" class="form-control" id="txt-peso" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt-altura" class="form-label">Altura</label>
+                        <input type="password" class="form-control" id="txt-altura">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txt-resultado" class="form-label">Resultado</label>
+                        <input type="password" class="form-control" id="txt-resultado" readonly>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn-imc-2">Calcular</button>
+                </form>
+            </div>
         </div>
-        <p>RESULTADO</p>
-        <div class="col-sm">
-            <input class="form-control" type="text" aria-label="readonly input example" readonly id="display">
-        </div>
-        <P> 
-        <div>
-            <button type="button" class='btn btn-primary btn-sm' id="btn-imc"> CALCULAR </button>
-        </div>
-    </center>
-        <script src="app.js"></script>
-        <script src="front.js"></script>
-    </body>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="front.js"></script>
+
+</body>
+
 </html>

@@ -1,0 +1,20 @@
+{
+	"info": {
+		"_postman_id": "dc6dd1fd-022a-4a03-afd9-f1c0270686fa",
+		"name": "JessikaProjetoImc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "imc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

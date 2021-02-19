@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const imc = require("./api");
+const api = require("./api");
 
 const app = express();
 const port = 3000;
@@ -13,14 +13,19 @@ app.use(cors());
 //
 app.get('/imc?', (req, res) => {
 
-    let peso = parseFloat(req.query.peso);
-    let altura = parseFloat(req.query.altura);
+    let peso = parseFloat(req.query.peso)
+    let altura = parseFloat(req.query.altura)
+    let imc = api.imc(peso, altura)
+    let mensagens = api.mensagens(imc)
 
-    res.send({
-        peso: peso,
-        altura: altura,
-        imc: imc(peso, altura)
-    });
+    // res.send({
+    //     peso: peso,
+    //     altura: altura,
+    //     imc: imc,
+    //     mensagens: mensagens
+    // });
+
+    res.send({ peso, altura, imc, mensagens });
 })
 
 

@@ -1,8 +1,5 @@
-//
 // Calcular o IMC
-//
 function imc(peso, altura) {
-
     peso   = parseFloat(peso);
     altura = parseFloat(altura);
 
@@ -19,4 +16,15 @@ function imc(peso, altura) {
     }
 }
 
-module.exports = imc;
+// Mensagem amigável
+function mensagens(resultadoImc) {
+    let _mensagens = {
+        'abaixo':    'Abaixo do peso',
+        'normal':    'Está normal',
+        'sobrepeso': 'Com sobrepeso',
+        'obeso':     'Acima do peso',
+    }
+    return _mensagens[resultadoImc]
+}
+
+module.exports = { imc, mensagens };

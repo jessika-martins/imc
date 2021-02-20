@@ -20,7 +20,7 @@ app.get('/imc?', (req, res) => {
     if (api.validar(altura)) {
         mensagens = "Altura inválida";
         res.status(400);
-        res.send({ mensagens });
+        res.send({ status: 400, mensagens });
     }
 
     let imc = api.imc(peso, altura)
@@ -33,7 +33,7 @@ app.get('/imc?', (req, res) => {
     //     mensagens: mensagens
     // });
 
-    res.send({ peso, altura, imc, mensagens });
+    res.send({  status: 200, peso, altura, imc, mensagens });
 
 })
 

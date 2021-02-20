@@ -15,8 +15,16 @@ app.get('/imc?', (req, res) => {
 
     let peso = parseFloat(req.query.peso)
     let altura = parseFloat(req.query.altura)
+    let mensagens = "";
+
+    if (api.validar(altura)) {
+        mensagens = "Altura inválida";
+        res.status(400);
+        res.send({ mensagens });
+    }
+
     let imc = api.imc(peso, altura)
-    let mensagens = api.mensagens(imc)
+    mensagens = api.mensagens(imc)
 
     // res.send({
     //     peso: peso,
@@ -26,6 +34,7 @@ app.get('/imc?', (req, res) => {
     // });
 
     res.send({ peso, altura, imc, mensagens });
+
 })
 
 

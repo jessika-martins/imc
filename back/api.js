@@ -1,9 +1,6 @@
-//
 // Calcular o IMC
-//
 function imc(peso, altura) {
-
-    peso   = parseFloat(peso);
+    peso = parseFloat(peso);
     altura = parseFloat(altura);
 
     let imc = peso / Math.pow(altura, 2);
@@ -19,4 +16,23 @@ function imc(peso, altura) {
     }
 }
 
-module.exports = imc;
+// Mensagem amigável
+function mensagens(resultadoImc) {
+    let _mensagens = {
+        'abaixo': 'Abaixo do peso',
+        'normal': 'Está normal',
+        'sobrepeso': 'Com sobrepeso',
+        'obeso': 'Acima do peso',
+    }
+    return _mensagens[resultadoImc]
+}
+
+function validar(altura) {
+    if (altura >= 3) {
+        return true; // ruim
+    } else {
+        return false; // bom
+    }
+}
+
+module.exports = { imc, mensagens, validar };
